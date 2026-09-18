@@ -1,3 +1,4 @@
+import { NavLink, Link } from "react-router";
 const Navbar = () => {
   return (
     <div className="navbar bg-[#05101ee2] shadow-sm text-white">
@@ -25,31 +26,33 @@ const Navbar = () => {
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
+            <NavLink>
               <a>Home</a>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink>
               <a>About Us</a>
-            </li>
+            </NavLink>
           </ul>
         </div>
-        <a className="text-xl gap-0 font-bold">
+        <Link to='/' className="text-xl gap-0 font-bold">
           Movie<span className="text-orange-500">Explorer</span>
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-bold">
-          <li>
+        <ul className="menu menu-horizontal gap-2 font-bold">
+          <NavLink>
             <a>Home</a>
-          </li>
-          <li>
+          </NavLink>
+          <NavLink>
             <a>About Us</a>
-          </li>
+          </NavLink>
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn bg-orange-500 text-white border-0 shadow-none">All Movies</a>
-      </div>
+      <Link to="/movies" className="navbar-end">
+        <a className="btn bg-orange-500 text-white border-0 shadow-none">
+          All Movies
+        </a>
+      </Link>
     </div>
   );
 };

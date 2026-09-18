@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 const Hero = () => {
   return (
     <div
@@ -14,7 +15,7 @@ const Hero = () => {
           <p className="mb-5">
             Here you can explore and watch all your favorite movies. We care about you choices. Enjoy the best entertaining moment with your favorite ones!
           </p>
-          <button className="btn bg-orange-500 text-white border-0 shadow-none">Explore All Movies</button>
+          <Link to="/movies" className="btn bg-orange-500 text-white border-0 shadow-none">Explore All Movies</Link>
         </div>
       </div>
     </div>
